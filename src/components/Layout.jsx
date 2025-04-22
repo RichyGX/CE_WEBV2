@@ -1,8 +1,8 @@
 import { Sidebar } from "./Sidebar";
 import { TopBar } from "./TopBar";
-import { useState } from "react";
+import { Children, useState } from "react";
 
-export const Layout = ({ content }) => {
+export const Layout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
@@ -18,7 +18,7 @@ export const Layout = ({ content }) => {
 
       <div className="main-content">
         <TopBar toggleSidebar={toggleSidebar} />
-        <div className="page-content">{content}</div>
+        <div className="page-content">{children}</div>
       </div>
     </div>
   );

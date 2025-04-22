@@ -48,7 +48,7 @@ h1 {
     font-size: 3em;
 }
 
-p{
+p {
     font-weight: 600;
     font-size: 1.2rem;
 }
@@ -182,7 +182,7 @@ p{
     align-items: center;
     gap: 1rem;
 
-    
+
 
 }
 
@@ -193,9 +193,10 @@ p{
     line-height: 1;
     display: flex;
     align-items: center;
-    
+
 
 }
+
 /* SIDEBAR */
 
 .sidebar {
@@ -258,67 +259,75 @@ span {
     display: flex;
     height: 100vh;
     overflow: hidden;
-  }
-  
-  /* Sidebar contenedor, separado por responsive */
-  .sidebar-container {
+}
+
+/* Sidebar contenedor, separado por responsive */
+.sidebar-container {
     transition: transform 0.3s ease-in-out;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .sidebar-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 15rem;
-      height: 100%;
-      background-color: white;
-      transform: translateX(-100%);
-      z-index: 9999;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 15rem;
+        height: 100%;
+        background-color: white;
+        transform: translateX(-100%);
+        z-index: 9999;
     }
-  
+
     .sidebar-container.open {
-      transform: translateX(0);
+        transform: translateX(0);
     }
-  
+
     .main-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
-  
+
     .hamburger {
         background: none;
         border: none;
         font-size: 2rem;
         cursor: pointer;
     }
-  }
-  
-  @media (min-width: 769px) {
-    .sidebar-container {
-      width: 15rem;
-    }
-  
-    .main-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .hamburger {
-      display: none;
-    }
-  }
+}
 
-  .overlay {
+@media (min-width: 769px) {
+    .sidebar-container {
+        width: 15rem;
+    }
+
+    .main-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 9998;
-  }
-  
+}
+
+.material-symbols-rounded {
+    cursor: pointer !important;
+}
+
+.page-content {
+    flex-grow: 1;
+    padding: 20px;
+}
