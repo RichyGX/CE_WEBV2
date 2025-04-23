@@ -20,7 +20,10 @@ export const Layout = ({ children }) => {
           </div>
           <div className="main-content">
             <TopBar toggleSidebar={toggleSidebar} />
+            <div className="content-and-sidenots">
               <div className="page-content">{children}</div>
+              <NotificationsBar></NotificationsBar>
+            </div>
           </div>
         </>
       )}
@@ -36,7 +39,6 @@ export const Layout = ({ children }) => {
           </div>
         </>
       )}
-
     </div>
   );
 };

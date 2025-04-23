@@ -291,6 +291,10 @@ span {
     flex-direction: column;
     gap: 2rem;
     overflow-y: auto !important;
+    max-height: calc(100vh - 6rem);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    flex: 0 0 80%
 }
 
 /*COMPONENTES*/
@@ -356,8 +360,8 @@ span {
 }
 
 /* COLAPSABLES*/
-.divColumn{
-    flex:1;
+.divColumn {
+    flex: 1;
 }
 
 @media (max-width: 768px) {
@@ -382,7 +386,10 @@ span {
         flex-direction: column;
         width: 100%;
         overflow: visible;
+
     }
+
+
 
     .hamburger {
         background: none;
@@ -413,16 +420,17 @@ span {
         margin: 0 auto;
     }
 
-    .divColumns{
+    .divColumns {
         display: flex;
         flex-direction: column;
         gap: 2rem
-
     }
 
     .notsBar{
-        display: no
+        display: none;
     }
+
+
 }
 
 @media (min-width: 769px) {
@@ -444,18 +452,36 @@ span {
         width: 100%;
     }
 
-    .divColumns{
+    .divColumns {
         display: flex;
         flex-direction: row;
         gap: 2rem
     }
-    
-    .content-and-nots{
+
+    .page-content::-webkit-scrollbar {
+        display: none;
+    }
+
+    .content-and-sidenots {
+
         display: flex;
         flex-direction: row;
-    }
-    .notsBar{
-        margin: 1rem !important;
         height: 100%;
+        overflow: hidden;
+        width: 100%;
+
+
     }
+
+    .notsBar {
+        margin: 1rem;
+        overflow: auto;
+        flex: auto
+
+    }
+
+    .notsBar::-webkit-scrollbar {
+        display: none;
+    }
+
 }
