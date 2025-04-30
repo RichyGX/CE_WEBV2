@@ -32,17 +32,18 @@ export const Sidebar = () => {
                 {role === 'padres_familia' && (
                     <>
                         <SidebarElements iconName="key" TitleName="Acceso" navName="/acceso"  />
+                        <SidebarElements iconName="calendar_month" TitleName="Calendario" navName="/calendario" />
                         <SidebarElements iconName="camera_video" TitleName="Monitoreo" navName="/monitoreo" />
                         <SidebarElements iconName="payments" TitleName="Pagos" navName="/pagos" />
                         <SidebarElements iconName="description" TitleName="Permisos" navName="/permisos" />
+                        <SidebarElements iconName="person" TitleName="Perfil" navName="/perfil" />
+                        <SidebarElements iconName="settings" TitleName="Ajustes" navName="/ajustes" />
 
 
                     </>
                 )}
                 <hr />
-                <SidebarElements iconName="person" TitleName="Perfil" navName="/perfil" />
-                <SidebarElements iconName="settings" TitleName="Ajustes" navName="/ajustes" />
-
+                
 
 
 

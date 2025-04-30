@@ -15,6 +15,7 @@ import { Pagos } from './files/padres/Pagos';
 import { Permisos } from './files/padres/Permisos';
 import {Perfil} from './files/padres/Perfil';
 import {Ajustes} from './files/padres/Ajustes';
+import {Calendario} from './files/padres/Calendario';
 
 
 
@@ -32,16 +33,13 @@ const App = () => {
                 <Route path='/proveedores' element={<PrivateRoute allowedRoles={['directivos']}> <Proveedores /> </PrivateRoute>}> </Route>
 
                 <Route path='/acceso' element={<PrivateRoute allowedRoles={['padres_familia']}> <Acceso/> </PrivateRoute>}></Route>
+                <Route path='/calendario' element={<PrivateRoute allowedRoles={['padres_familia']}> <Calendario/> </PrivateRoute>}></Route>
                 <Route path='/monitoreo' element={<PrivateRoute allowedRoles={['padres_familia']}> <Monitoreo/> </PrivateRoute>}></Route>
                 <Route path='/pagos' element={<PrivateRoute allowedRoles={['padres_familia']}> <Pagos/> </PrivateRoute>}></Route>
                 <Route path='/permisos' element={<PrivateRoute allowedRoles={['padres_familia']}> <Permisos/> </PrivateRoute>}></Route>
                 <Route path='/perfil' element={<PrivateRoute allowedRoles={['padres_familia']}> <Perfil/> </PrivateRoute>}></Route>
                 <Route path='/ajustes' element={<PrivateRoute allowedRoles={['padres_familia']}> <Ajustes/> </PrivateRoute>}></Route>
-
-
-                
                 <Route path="/unauthorized" element={<Unauthorized />} />
-
             </Routes>
         </AuthProvider>
     )

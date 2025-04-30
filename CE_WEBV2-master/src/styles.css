@@ -490,6 +490,35 @@ span {
 
 .TablaEntrada{
     font-family: 'Poppins', sans-serif;
-    
+}
+
+.HistorialPagos {
+    font-family: 'Poppins', sans-serif;
+}
+
+.PagosPendientes {
+    font-family: 'Poppins', sans-serif;
+}
+
+.textNomAlumna{
+    color: red;
+}
+
+.btnCerrarProxPago{
+    background-color: transparent;
+    border: 0px;
+    color: "white";
+}
+
+.tableScroll{
+	overflow-x: auto;
+	overflow-y: auto;
+    padding: 20px;
+	
+}
+@media (max-width: 578px) {
+#imgActividad{
+    margin: 10px 0px 10px 0px;
+}
 
 }
