@@ -24,6 +24,7 @@
     --gray_titles: #3A3E42;
 }
 
+
 a {
     text-decoration: none;
 }
@@ -517,8 +518,12 @@ span {
 	
 }
 @media (max-width: 578px) {
-#imgActividad{
-    margin: 10px 0px 10px 0px;
+    #imgActividad{
+        margin: 10px 0px 10px 0px;
+    }
 }
 
+.btn-pagar:hover{
+    background-color: var(--dark_purple);
+   
 }

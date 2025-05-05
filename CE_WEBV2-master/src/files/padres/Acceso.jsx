@@ -8,7 +8,6 @@ export const Acceso = () => {
     return(
         <>
             <Layout>
-                <AvatarComponent/>
                     <AccesoComponent/>
             </Layout>
         </>

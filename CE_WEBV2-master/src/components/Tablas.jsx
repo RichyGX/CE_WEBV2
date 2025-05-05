@@ -1,20 +1,26 @@
-import React from 'react';
-import { Table, Button } from 'react-bootstrap';
-import AvatarComponent from './AvatarComponent';
+import React, {useState} from "react";
+import { Table, Button, Form } from "react-bootstrap";
+
 
 
 function Pagos() {
+  const [filter, setFilter] = useState("");
+  const data = [];
+  const filteredData = data.filter(item =>
+    item.nombre.toLowerCase().includes(filter.toLowerCase())
+  );
   return (
     <div className="container mt-5">
       {/* Botón Pago por concepto */}
-      <AvatarComponent/>
       <div className="d-flex justify-content-start mb-4">
         <Button variant="outline-success">Pago por concepto</Button>
       </div>
 
       {/* Tabla de Pagos pendientes */}
-      <h4><b>Pagos pendientes</b></h4>
-      <Table striped bordered hover responsive className='PagosPendientes'>
+      <h4>
+        <b>Pagos pendientes</b>
+      </h4>
+      <Table striped bordered hover responsive className="PagosPendientes">
         <thead>
           <tr>
             <th>Fecha límite de pago</th>
@@ -31,7 +37,13 @@ function Pagos() {
             <td>Material didáctico</td>
             <td>Pendiente</td>
             <td>
-            <Button variant="outline-success" size="sm" className="d-block mx-auto">Pagar</Button>
+              <Button
+                variant="outline-success"
+                size="sm"
+                className="d-block mx-auto"
+              >
+                Pagar
+              </Button>
             </td>
           </tr>
           <tr>
@@ -40,7 +52,13 @@ function Pagos() {
             <td>Material didáctico</td>
             <td>Pendiente</td>
             <td>
-              <Button variant="outline-success" size="sm" className="d-block mx-auto">Pagar</Button>
+              <Button
+                variant="outline-success"
+                size="sm"
+                className="d-block mx-auto"
+              >
+                Pagar
+              </Button>
             </td>
           </tr>
           <tr>
@@ -49,15 +67,37 @@ function Pagos() {
             <td>Material didáctico</td>
             <td>Pendiente</td>
             <td>
-              <Button variant="outline-success" size="sm" className="d-block mx-auto">Pagar</Button>
+              <Button
+                variant="outline-success"
+                size="sm"
+                className="d-block mx-auto"
+              >
+                Pagar
+              </Button>
             </td>
           </tr>
         </tbody>
       </Table>
 
       {/* Tabla de Historial de pagos */}
-      <h4 className="mt-5"><b>Historial de pagos</b></h4>
-      <Table striped bordered hover responsive className='HistorialPagos'>
+      <h4 className="mt-5">
+        <b>Historial de pagos</b>
+      </h4>
+      
+     <div className="row mb-4">
+    <div className="col-8">
+    <Form.Control
+        type="text"
+        placeholder="Filtrar por concepto..."
+        value={filter}
+        onChange={e => setFilter(e.target.value)}
+      />
+    </div>
+    <div className="col-4">
+      <Button className="btn btn-primary">Filtrar</Button>
+    </div>
+     </div>
+      <Table striped bordered hover responsive className="HistorialPagos">
         <thead>
           <tr>
             <th>Fecha</th>
@@ -76,7 +116,13 @@ function Pagos() {
             <td>Realizado</td>
             <td>Tarjeta crédito</td>
             <td>
-            <Button variant="outline-success" size="sm" className="d-block mx-auto">Descargar</Button>
+              <Button
+                variant="outline-success"
+                size="sm"
+                className="d-block mx-auto"
+              >
+                Descargar
+              </Button>
             </td>
           </tr>
           <tr>
@@ -86,7 +132,13 @@ function Pagos() {
             <td>Vencido</td>
             <td>Tarjeta debito</td>
             <td>
-            <Button variant="outline-success" size="sm" className="d-block mx-auto">Descargar</Button>
+              <Button
+                variant="outline-success"
+                size="sm"
+                className="d-block mx-auto"
+              >
+                Descargar
+              </Button>
             </td>
           </tr>
           <tr>
@@ -96,7 +148,13 @@ function Pagos() {
             <td>Realizado</td>
             <td>Transferencia</td>
             <td>
-            <Button variant="outline-success" size="sm" className="d-block mx-auto">Descargar</Button>
+              <Button
+                variant="outline-success"
+                size="sm"
+                className="d-block mx-auto"
+              >
+                Descargar
+              </Button>
             </td>
           </tr>
           <tr>
@@ -106,7 +164,13 @@ function Pagos() {
             <td>Realizado</td>
             <td>Deposito</td>
             <td>
-            <Button variant="outline-success" size="sm" className="d-block mx-auto">Descargar</Button>
+              <Button
+                variant="outline-success"
+                size="sm"
+                className="d-block mx-auto"
+              >
+                Descargar
+              </Button>
             </td>
           </tr>
           <tr>
@@ -116,7 +180,13 @@ function Pagos() {
             <td>Vencido</td>
             <td>Paypal</td>
             <td>
-            <Button variant="outline-success" size="sm" className="d-block mx-auto">Descargar</Button>
+              <Button
+                variant="outline-success"
+                size="sm"
+                className="d-block mx-auto"
+              >
+                Descargar
+              </Button>
             </td>
           </tr>
           <tr>
@@ -126,7 +196,13 @@ function Pagos() {
             <td>Vencido</td>
             <td>Deposito</td>
             <td>
-            <Button variant="outline-success" size="sm" className="d-block mx-auto">Descargar</Button>
+              <Button
+                variant="outline-success"
+                size="sm"
+                className="d-block mx-auto"
+              >
+                Descargar
+              </Button>
             </td>
           </tr>
         </tbody>
